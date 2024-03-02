@@ -1,0 +1,406 @@
+﻿@using LKDienThoai_Web.Models
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="~/Assets/Style/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+
+            <!-- phan dau -->
+            <div class="header-wraps">
+                <div class="container">
+                    <div class="header-wrap">
+                        <div class="header_img">
+                            <a href="/Home/Index">
+                                <img  class="img-logo img-fluid hover-img" src="~/Assets/Img_Logo_Banner/img-logoAnh.png">
+
+                            </a>
+                        </div>
+                        <!-- tim kiem header-->
+                        <form class="formSearch">
+                            <div class="icon-search">
+                                <i class='bx bx-search-alt-2'></i>
+                            </div>
+                            <div class="input-search">
+                                <input type="text" placeholder="Tìm kiếm...">
+                            </div>
+                        </form>
+                        <!-- pham thong tin lien he -->
+                        <div class="header-phone">
+                            <a class="phone flex-rows" href="">
+                                <div class="phone-icon">
+                                    <i class='bx bx-phone-call'></i>
+                                </div>
+                                <div class="phone-content">
+                                    <p class="title">
+                                        Liên hệ <br> 1800.0103
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="header-order ">
+                            @{
+                            if (Session["tkdn"] != null)
+                            {
+                                    
+                            KhachHang khs = (KhachHang)Session["khName"];
+                            <a class="order flex-rows" href="/HienThiDonHang/HoaDonKh/?maKh=@khs.MaKH">
+                                <div class="order-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.22 25.85" height="24">
+                                        <defs>
+                                            <style>
+                                                .cls-1, .cls-2, .cls-3 {
+                                                    fill: none;
+                                                    stroke: #fff;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                }
+
+                                                .cls-1 {
+                                                    stroke-width: 1.66px;
+                                                }
+
+                                                .cls-2 {
+                                                    stroke-width: 1.66px;
+                                                }
+
+                                                .cls-3 {
+                                                    stroke-width: 1.8px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle cx="7.66" cy="22.02" r="3" class="cls-1"></circle> <circle cx="24.79" cy="22.02" r="3" class="cls-2"></circle> <path d="M28.61,22h4.13a1.44,1.44,0,0,0,1.44-1.44v-6" class="cls-3"></path> <path d="M27.12.9H14.82a1.44,1.44,0,0,0-1.44,1.44V20.58A1.44,1.44,0,0,0,14.82,22h6.29" class="cls-3"></path> <path d="M10.27,5.92H6.75A2.65,2.65,0,0,0,4.54,7.11L1.33,12A2.64,2.64,0,0,0,.9,13.47v6.46A2.1,2.1,0,0,0,3,22h.75" class="cls-3"></path> <path d="M34.18,3.47V2.34A1.44,1.44,0,0,0,32.74.9H25.08" class="cls-3"></path> <line x1="43.32" y1="6.97" x2="32.57" y2="6.97" class="cls-3"></line> <line x1="40.5" y1="11.05" x2="32.57" y2="11.05" class="cls-3"></line> <line x1="42.09" y1="16.33" x2="38.07" y2="16.33" class="cls-3"></line></g></g>
+                                    </svg>
+                                </div>
+                                <div class="order-content">
+                                    <p class="title">
+                                        Tra cứu <br> đơn hàng
+                                    </p>
+
+                                </div>
+                            </a>
+
+                            }
+                            else
+                            {
+                            <a class="order flex-rows" href="/User/taiKhoan">
+                                <div class="order-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.22 25.85" height="24">
+                                        <defs>
+                                            <style>
+                                                .cls-1, .cls-2, .cls-3 {
+                                                    fill: none;
+                                                    stroke: #fff;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                }
+
+                                                .cls-1 {
+                                                    stroke-width: 1.66px;
+                                                }
+
+                                                .cls-2 {
+                                                    stroke-width: 1.66px;
+                                                }
+
+                                                .cls-3 {
+                                                    stroke-width: 1.8px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle cx="7.66" cy="22.02" r="3" class="cls-1"></circle> <circle cx="24.79" cy="22.02" r="3" class="cls-2"></circle> <path d="M28.61,22h4.13a1.44,1.44,0,0,0,1.44-1.44v-6" class="cls-3"></path> <path d="M27.12.9H14.82a1.44,1.44,0,0,0-1.44,1.44V20.58A1.44,1.44,0,0,0,14.82,22h6.29" class="cls-3"></path> <path d="M10.27,5.92H6.75A2.65,2.65,0,0,0,4.54,7.11L1.33,12A2.64,2.64,0,0,0,.9,13.47v6.46A2.1,2.1,0,0,0,3,22h.75" class="cls-3"></path> <path d="M34.18,3.47V2.34A1.44,1.44,0,0,0,32.74.9H25.08" class="cls-3"></path> <line x1="43.32" y1="6.97" x2="32.57" y2="6.97" class="cls-3"></line> <line x1="40.5" y1="11.05" x2="32.57" y2="11.05" class="cls-3"></line> <line x1="42.09" y1="16.33" x2="38.07" y2="16.33" class="cls-3"></line></g></g>
+                                    </svg>
+                                </div>
+                                <div class="order-content">
+                                    <p class="title">
+                                        Tra cứu <br> đơn hàng
+                                    </p>
+
+                                </div>
+                            </a>
+
+
+                            }
+                            }
+                        </div>
+                        <div class="header-cart ">
+                            <a class="cart flex-rows" href="/GioHang/XemChiTietGioHang">
+                                <div class="cart-icon">
+                                    <i class="bx bx-cart"></i>
+                                </div>
+                                <div class="cart-content">
+                                    <p class="title">
+                                        Giỏ <br> hàng
+                                    </p>
+                                    @{
+                                    if (Session["cart"] == null)
+                                    {
+                                    <span class="cart-count">
+                                        0
+                                    </span>
+                                    }
+                                    else
+                                    {
+                                    GioHang gio = (GioHang)Session["cart"];
+                                    <span class="cart-count">
+                                        @gio.DemSL()
+                                    </span>
+
+                                    }
+
+                                    }
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="header-account ">
+                            <a class="account flex-rows" href="/User/taiKhoan">
+                                <div class="account-icon">
+                                    <i class="bx bxs-user-circle"></i>
+                                </div>
+
+                                <div class="account-content">
+
+                                    @{
+                                    TAIKHOAN khDn = (TAIKHOAN)Session["tkdn"];
+                                    KhachHang kh = (KhachHang)Session["khName"];
+                                    if ((Session["tkdn"] != null) && (khDn.LOAITAIKHOAN == "ADMIN     "))
+                                    {
+
+
+                                    TAIKHOAN a = (TAIKHOAN)Session["tkdn"];
+
+                                    <p class="title" style="color: #fff">
+                                        @kh.HoTen
+                                    </p>
+                                    <div class="header__user">
+                                        <div class="header_User-dropdown">
+                                            <div class="account-icon" style="color: black; font-size: 30px; ">
+                                                <i class="bx bxs-user-circle"></i>
+                                            </div>
+                                            <div class="account-content" style="color: black; font-size: 18px; margin-left: 12px;">
+                                                <p class="title" style="font-weight: 600;">
+                                                    @kh.HoTen
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <a class="User-dropdown-item" href="/Admin/HomeAdmin">
+                                            Trang chủ chủ admin
+                                        </a>
+                                        <hr>
+                                        <a href="/User/CapNhat" class="User-dropdown-item">
+                                            Cài đặt
+                                        </a>
+                                        <hr>
+                                        <a class="User-dropdown-item" href="/User/DangXuat">
+                                            Đăng xuất
+                                        </a>
+
+
+
+                                    </div>
+
+                                    }
+                                    else if (Session["tkdn"] != null)
+                                    {
+                                         <p class="title" style="color: #fff">
+                                        @kh.HoTen
+                                    </p>
+                                    <div class="header__user">
+                                        <div class="header_User-dropdown">
+                                            <div class="account-icon" style="color: black; font-size: 30px; ">
+                                                <i class="bx bxs-user-circle"></i>
+                                            </div>
+                                            <div class="account-content" style="color: black; font-size: 18px; margin-left: 12px;">
+                                                <p class="title" style="font-weight: 600;">
+                                                    @kh.HoTen
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+
+                                        <a href="/User/CapNhat" class="User-dropdown-item">
+                                            Cài đặt
+                                        </a>
+                                        <hr>
+                                        <a class="User-dropdown-item" href="/User/DangXuat">
+                                            Đăng xuất
+                                        </a>
+
+
+
+                                    </div>
+
+                                    }
+                                    else
+                                    {
+                                    <p class="title">
+                                        Đăng Nhập
+                                    </p>
+                                    }
+
+
+                                    }
+
+
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- menu -->
+            <div class="header-main">
+                <div class="container header-navs">
+                    @Html.Action("menuLLK", "Home")
+                    <div class="menu-functions-nav">
+
+                        <a href="" class="menu-function">
+                            <div class="function-item bg-function-none" style="display: flex; align-items: center;">
+                                <i class='bx bx-sort text-color' style="font-size: 27px; "></i>
+                                <span class="text-function text-color">
+                                    Thu cũ
+                                    <br>
+                                    đổi mới
+                                </span>
+                            </div>
+                        </a>
+                        <a href="" class="menu-function">
+                            <div class="function-item bg-function-none" style="display: flex; align-items: center;">
+                                <i class='bx bx-sort text-color' style="font-size: 27px; "></i>
+                                <span class="text-function text-color">
+                                    Trả
+                                    <br>
+                                    góp
+                                </span>
+                            </div>
+                        </a>
+                        <a href="" class="menu-function bg-function-promotion">
+                            <div class="function-item">
+                                <span class="text-function text-tile">
+                                    Khuyễn Mãi
+                                    <br>
+                                    tháng 12
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- phan san pham -->
+        <div class="content-section">
+            @RenderBody()
+        </div>
+
+
+        @*cuoi trang*@
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 footer-lion">
+                            <h4 class="title-footer">PHỤ KIỆN</h4>
+                            <div class="row footer-content-lion">
+                                <div class="col-md footer-content-lion-text">
+                                    <p>
+                                        Đưa đến một chất lượng sản phẩm hoàn hảo với một giá thành hợp lí nhất. Luôn đặt
+                                        khách hàng lên trên cả lợi nhuận.
+                                    </p>
+                                </div>
+                                <div class="col-md footer-content-lion-text">
+
+                                    <ul class="add-footer-content-lion">
+                                        <li><b style="color: #fff;">Điện Thoại: </b>0366178160</li>
+                                        <li><b style="color: #fff;">Email: </b>likonTeam123@gmail.com</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 footer-lion">
+                            <h4 class="title-footer">Hỗ trợ khách hàng</h4>
+                            <div class="footer-content-lion">
+                                <ul class="footer-Navlink">
+                                    <li><a href="./GioiThieu.html">Giới thiệu</a></li>
+                                    <li><a href="./ChinhSachDoiTra.html">Chính sách đổi trả</a></li>
+                                    <li><a href="./ChinhSachBaoMat.html">Chính sách bảo mật</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 footer-lion">
+                            <h4 class="title-footer">Liên Hệ </h4>
+                            <div class="footer-lion-content">
+                                <div class="footer-infor">
+                                    <span>
+                                        <b style="color: #fff !important;">Địa chỉ:</b> 400 Tân Kỳ Tân Quý, phường
+                                        Sơn Kỳ, quận Tân Phú
+                                    </span>
+                                </div>
+                                <div class="flo-me">
+                                    <h4 class="title-footer " style="color: #fff !important;">Follow PHỤ KIỆN nha! </h4>
+                                    <ul class="nav footer-nav-icon">
+                                        <li>
+                                            <a href="">
+                                                <i class="bx bxl-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="bx bxl-instagram-alt"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="bx bxl-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="bx bxl-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr style="margin: 0px;">
+            <div class="footer-copyright">
+                Copyright © 2022 Team Likon.
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="./js.js">
+
+    </script>
+</body>
+</html>

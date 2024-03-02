@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/Shared/layOut_Admin.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model LinhKien
+<div class="content-section">
+    <div class="container">
+        <link href="~/Assets/Style/admin.css" rel="stylesheet" />
+        <div class="content-account">
+            <div class="content-create-acc">
+                <div class="header-content-create-acc">
+                    <h1>Sửa</h1>
+                </div>
+                <div class="input-create-acc">
+                    <form action="/Admin/xlSua/?m=@Model.MaLK" method="post">
+                        <input required type="text" value="@Model.MaLK" name="mlk" disabled>
+                        <br>
+                        <input required type="text" name="tenlk">
+                        <br>
+                        <input required type="text" value="@Model.DonGia" name="donGia">
+                        <br>
+                        <input required type="number" value="@Model.SLTon" name="sl">
+                        <br>
+                        <label for="" style="font-weight: bold;">Mô tả sản phẩm</label>
+                        <textarea class="form-control" rows="5" id="comment" name="mota" style=" margin-top: 25px;"></textarea>
+                        <br>
+                        <a class="button-create-acc">
+                            <input required type="submit" class="button-create-acc" placeholder="Sửa">
+                        </a>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+﻿/* css  product */
+.product-menu-list li {
+    display: inline-block;
+    font-size: 12px;
+    color: rgb(67, 66, 66)
+    
+}
+.product-menu-list li a{
+    color: rgb(111, 110, 110);
+}
+.product-menu-list{
+    padding: 5px;
+    margin: 0px;
+}
+.product-content-gallery
+{
+    background-color: #fff;
+}
+.product-gallery-img img{
+    width: 100%;
+}
+.product-order .product-order-heading h1{
+    font-size: 24px;
+    margin: 20px 0 8px;
+    font-weight: 600;
+}
+.product-order .product-order-heading h6{
+    font-size: 12px;
+    color: rgb(111, 110, 110);
+    margin-bottom: 17px;
+}
+span.pro-price-del {
+    font-size: 28px;
+    color: #878c8f;
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 22px;
+}
+span.pro-price{
+    font-size: 26px;
+    margin-left: 5px;
+    color: red;
+    font-weight: 600;
+}
+.product-order{
+    background-color: #fff;
+}
+.product-order .product-order-size{
+    margin-top: 22px;
+}
+.product-order .product-order-size{
+    font-size: 15px;
+    color: rgb(111, 110, 110);
+    margin-bottom: 17px;
+}
+.product-order .pro-size-set{
+    margin-top: 12px;
+}
+.product-order-actions{
+    margin-left: 0px;
+}
+.product-order-actions .product-order-quantity button{
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+}
+.product-order-quantity{
+    margin-bottom: 30px;
+}
+.product-order-quantity .quantity-input{
+    width: 60px;
+    height: 45px;
+    text-align: center;
+    font-weight: 600;
+}
+.porduct-order-buying .btn-pro-order-buying{
+    height: 45px;
+    border: 1px solid rgb(122, 226, 153);
+    width: 427px;
+    font-weight: 600;
+    background-color: #fff;
+}
+.porduct-order-buying .btn-pro-order-buying:hover{
+    background-color: rgb(122, 226, 153);
+    color: #fff;
+}
+.product-description{
+  margin-top: 12px;  
+}
+.product-des{
+    background-color: #fff;
+}
+.product-des-heading{
+    padding: 12px;
+}
+
+.product-des-text{
+    font-size: 13px;
+}
+.product-Details{
+    margin-bottom: 40px;
+}

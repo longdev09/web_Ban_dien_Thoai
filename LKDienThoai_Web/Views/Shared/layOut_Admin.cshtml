@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Assets/Style/admin.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="main-admin" style="padding: 20px; height: 100vh">
+        <div class="main-row row" style="height: 100%">
+            <div class="slider-bar col-2">
+                <a  href="/Home/Index" class="header-logo">
+                    <img class="img-logo img-fluid hover-img" src="~/Assets/Img_Logo_Banner/img-logoAnh.png">
+
+                </a>
+                <div class="heading-slider_bar">
+                    <ul class="nav-bar">
+                        <li class="nav-item active">
+                            <a href="" class="nav-link">
+                                <div class="item ">
+                                    <i class='bx bxs-dashboard circle-line2'></i>
+                                    <span>Dashboard</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/QlSanPham" class="nav-link">
+                                <div class="item">
+                                    <i class='bx bx-cart circle-line2'></i>
+                                    <span>Quản Lý Linh Kiện</span>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Ql_LoaiLK" class="nav-link">
+                                <div class="item">
+
+                                    <i class='bx bxs-user-check circle-line2'></i>
+                                    <span>Quản lý Loại Linh Kiện</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Ql_Hd" class="nav-link">
+                                <div class="item">
+                                    <i class='bx bx-calendar-plus circle-line2'></i>
+                                    <span>Quản lý hóa đơn</span>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Ql_KhachHang" class="nav-link">
+                                <div class="item">
+
+                                    <i class='bx bxs-user-check circle-line2'></i>
+                                    <span>Quản lý Khách Hàng</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section col-10">
+                <div class="header-wrap justify-content-between">
+                    <div class="text_greeting">
+                        <h4>Hi Bạch Long</h4>
+                        <br>
+                        <p>Welcome to the dashboard</p>
+                    </div>
+                    
+                    <div class="account-notify-setting">
+                        <div class="notify circle-line maginlef">
+                            <i class='bx bxs-bell'></i>
+                        </div>
+                        <div class="setting circle-line maginlef">
+                            <i class='bx bxs-cog'></i>
+                        </div>
+                        <div class="avata-acc maginlef">
+                            <img src="./acses/img/31818797506_41e52a8b36.jpg" alt="">
+                            <span>Bạch Long</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content row">
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

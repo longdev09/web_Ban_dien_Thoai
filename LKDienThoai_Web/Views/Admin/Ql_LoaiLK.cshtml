@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Ql_LoaiLK";
+    Layout = "~/Views/Shared/layOut_Admin.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model List<LoaiLK>
+<div class="row mt-3">
+    <div class="tieuDe">
+        <p>Quản Lý Loại Linh Kiện</p>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="row">
+        <div class="dsSP">
+            <nav class="navbar navbar-expand-sm">
+                <div class="container">
+                    <form action="/Admin/XlThemLLK" class="navbar-nav" method="post">
+
+                        <input type="text" class="form-control" placeholder="Tên linh kiện." name="tLk">
+
+                        <input type="submit" value="Thêm">
+
+                    </form>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </nav>
+            <hr style="border: 1px solid gray;">
+            <div style="width: 200px;">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button class="btn">Tìm kiếm</button>
+                </div>
+            </div>
+            <table class="table text-center">
+                <tr>
+                   
+                    <th>Mã Linh Kiện</th>
+                    <th>Tên Linh Kiện</th>
+                   
+                </tr>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        
+                        <td>@i.MaLoai</td>
+                        <td>@i.TenLoai</td>
+                      
+                    </tr>
+                }
+
+
+            </table>
+        </div>
+    </div>
+</div>
+

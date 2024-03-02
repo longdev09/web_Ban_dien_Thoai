@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "ThemSanPham";
+    Layout = "~/Views/Shared/layOut_Admin.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model List<LoaiLK>
+<div class="row mt-3">
+    <div class="tieuDe">
+        <p>Danh Sách Sản Phẩm / Thêm mới sản phẩm</p>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="row">
+        <div class="dsSP">
+            <h5 style="margin-top: 10px;">Tạo mới sản phẩm</h5>
+            <hr style="border: 1px solid gray;">
+            <form action="/Admin/xlThem" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Tên sản phẩm.." name="tenSP">
+                    </div>
+                    <div class="col" style="font-weight: bold;">
+
+                        <input type="number" class="form-control" placeholder="Đơn giá.." name="donGia">
+                    </div>
+                    <div class="col">
+
+                        <input type="number" class="form-control" placeholder="Số lượng..." name="sl">
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="loai">
+                            <option>-- Loại sản phẩm --</option>
+                            @foreach(var i in Model)
+                            {
+                                <option value="@i.MaLoai" > @i.TenLoai </option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <label for="" style="font-weight: bold;">Hình ảnh</label>
+                    <input type="file" name="fileAnh">
+                </div>
+                <div class="row mt-2">
+                    <label for="" style="font-weight: bold;">Mô tả sản phẩm</label>
+                    <textarea class="form-control" rows="5" id="comment" name="mota"></textarea>
+                </div>
+                <div style=" display: flex; justify-content: center;">
+                    <input class="btn-bill" style="margin-top: 12px" type="submit" value="THÊM" name="" id="">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+

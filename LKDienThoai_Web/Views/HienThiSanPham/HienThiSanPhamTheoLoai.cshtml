@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "HienThiSanPhamTheoLoai";
+    Layout = "~/Views/Shared/Layout-page.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model List<LinhKien>
+
+<div class="main-layout">
+    <div class="collection-wapper">
+        <div class="container">
+            <div class="wapper-heading">
+                <div class="heading-text-product">
+                    <h4>@ViewBag.TenLoai</h4>
+                </div>
+                <div class="product-soft">
+                    <div class="softMenu-nav-list">
+                        <a href="" class="softMenu-nav-link">
+                            <i class='bx bx-sort-down'></i>
+                            <div>Giá Cao - Thấp</div>
+                        </a>
+                    </div>
+                    <div class="softMenu-nav-list">
+                        <a href="" class="softMenu-nav-link">
+                            <i class='bx bx-sort-up'></i>
+                            <div>Giá Thấp - Cao</div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="home-product-collection " style="margin-top: 49px;">
+        <div class="container">
+            <div class="wraplist-products-by-type">
+                @foreach (var item in Model)
+                {
+                    <div class="product-item">
+                        <div class="product-loop">
+                            <div class="product-title">
+                                
+                                <a class="prod-img" href="/HienThiSanPham/XemChiTietSp/?mlk=@item.MaLK">
+                                    <img src="~/Assets/img-Sp/@item.HinhAnh" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="product-details">
+                                <h3>
+                                    <a href="" class="prod-text-detai">
+                                        @item.TenLK
+                                    </a>
+                                </h3>
+
+                                <div class="product-price">
+                                    <!-- giá sau khi giam -->
+                                    <span class="price">Giá: @item.DonGia₫</span>
+                                </div>
+
+                            </div>
+                          
+                            @*thong bao*@
+                            <div  class=" product-action">
+                                <a   class="add-cart" href="/GioHang/ChonMua/?mlk=@item.MaLK">
+                                    <i class='bx bxs-cart-add'></i>
+                                    Thêm vào giỏ
+                                </a>
+                                <div class="add-heart">
+                                    <i class='bx bxs-heart'></i>
+                                </div>
+                                <div class="fast-detail">
+                                    <i class='bx bx-cog'></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                }
+            </div>
+            <!-- các sản phẩm item -->
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+

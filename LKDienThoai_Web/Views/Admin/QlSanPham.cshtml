@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "QlSanPham";
+    Layout = "~/Views/Shared/layOut_Admin.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model List<LinhKien>
+<div class="row mt-3">
+    <div class="tieuDe">
+        <p>Quản Lý Sản  Phẩm</p>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="row">
+        <div class="dsSP">
+            <nav class="navbar navbar-expand-sm">
+                <div class="container">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="background-color: #66FF33;">
+                            <a href="/Admin/ThemSanPham" class="nav-link">Thêm sản phẩm mới</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </nav>
+            <hr style="border: 1px solid gray;">
+            <div style="width: 200px;">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button class="btn">Tìm kiếm</button>
+                </div>
+            </div>
+            <table class="table text-center">
+                <tr>
+                    <th>
+                        Xóa| Sữa
+                       
+                    </th>
+                    <th>Mã Linh Kiện</th>
+                    <th>Tên Linh Kiện</th>
+                    <th>Đơn Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Mô Tả</th>
+                </tr>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>
+                            <a href="/Admin/XoaSanPham/?m=@i.MaLK">
+                                Xóa
+                            </a>
+                            <a href="/Admin/Sua/?m=@i.MaLK">
+                                Sửa
+                            </a>
+                        </td>
+                        <td>@i.MaLK</td>
+                        <td>@i.TenLK</td>
+                        <td>@i.DonGia</td>
+                        <td>@i.SLTon</td>
+                        <td>@i.MoTa</td>
+
+                    </tr>
+                }
+
+
+            </table>
+        </div>
+    </div>
+</div>

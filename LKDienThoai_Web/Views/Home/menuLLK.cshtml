@@ -1,0 +1,10 @@
+﻿@using LKDienThoai_Web.Models;
+@model List<LoaiLK>
+
+<ul class="header-nav">
+
+    @foreach (var item in Model)
+    {
+        <li class="header-nav-item"><a href="/HienThiSanPham/HienThiSanPhamTheoLoai?maloai=@item.MaLoai" class="nav-link-item">@item.TenLoai</a></li>
+    }
+</ul>

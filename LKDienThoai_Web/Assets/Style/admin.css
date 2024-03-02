@@ -1,0 +1,215 @@
+﻿
+
+
+ul{
+    list-style-type: none !important;
+}
+
+h4{
+    margin-bottom: 0px;
+}
+/* header */
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0px;
+    margin: 20px 0px;
+}
+.main-row{
+    display: flex;
+}
+.slider-bar{
+    padding: 12px;
+}
+.content-section{
+    display: flex;
+    flex-direction: column;
+
+}
+.header-logo img{
+    width: 150px;
+    padding: 8px;
+}
+
+.header-wrap{
+    height: 67px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 49px 60px;
+
+}
+.text_greeting {
+    line-height: 0px;
+}
+.account-notify-setting{
+    display: flex;
+    align-items: center;
+}
+.avata-acc img{
+    width: 35px;
+    border-radius: 35px;
+}
+.search{
+    width: 300px;
+    border: 1px #8b8282 solid;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius:12px ;
+    outline: blueviolet
+}
+.icon-search{
+    padding: 5px 15px;
+    font-size: 20px;
+}
+.input-search input{
+    width: 248px;
+    height: 38px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius:12px ;
+}
+
+
+.maginlef{
+    margin-left: 12px;
+}
+
+.circle-line{
+    font-size: 20px;
+    background-color: #ededed;
+    height: 36px;
+    width: 36px;
+    border-radius: 17px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+.circle-line2{
+    font-size: 18px;
+    margin-right: 12px;
+    
+}
+.nav-item{
+    margin: 12px;
+    background-color: #fff;
+}
+.item{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #82868f;
+    width: 100%;
+    transition: all 300ms ease;
+    
+}
+.item:hover{
+    margin-left: 10px;
+    color: rgb(15, 164, 169);
+}
+
+
+.content{
+    background-color: #f8f9fa;
+    padding: 20px;
+    
+
+}
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 212px;
+    padding: 12px;
+    border-radius: 22px;
+    background-color: #fff;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    margin-bottom: 12px;
+}
+.cart-item-logo{
+    font-size: 25px;
+    height: 65px;
+    width: 65px;
+    border-radius: 32px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+#chart-bill{
+    margin-top: 20px;
+    height: 65px;
+    width: 65px;
+    background-color: #fff;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    border-radius: 22px;
+    padding: 20px;
+}
+
+.form-item{
+    height: 44px;
+    border-radius: 9px;
+    padding: 12px;
+}
+.btn-bill{
+    padding: 8px;
+    background-color: aquamarine;
+    border: none;
+}
+
+
+
+.content-create-acc{
+    
+    max-width: 620px; 
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 25px 30px 30px;
+}
+
+/*Sửa from*/
+.input-create-acc input{
+    width: 100%;
+    margin-top: 25px;
+    height: 50px;
+    padding: 12px;
+    font-size: 13px;
+    color: #5c5c5c;
+    border: none; 
+    background-color: #ededed;
+    border-radius: 3px;
+}
+.input-create-acc .input-gt{
+    height: 12px;
+    width: 17px;
+    
+}
+.input-create-acc input[type=text]:focus {
+    background-color: #fff;
+  }
+.input-create-acc .button-create-acc{
+    text-align: center;
+    margin-top: 25px;
+    
+}
+.input-create-acc .button-create-acc button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: black;
+}
+.input-create-acc .button-create-acc button:hover{
+    background-color: #fff;
+    color: black;
+    border: 1px black solid;
+}
+
+

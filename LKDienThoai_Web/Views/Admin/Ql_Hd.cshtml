@@ -1,0 +1,83 @@
+﻿        @{
+            ViewBag.Title = "Ql_Hd";
+            Layout = "~/Views/Shared/layOut_Admin.cshtml";
+        }
+
+        @using LKDienThoai_Web.Models;
+        @model List<HoaDonDat>
+        <div class="row mt-3">
+            <div class="tieuDe">
+                <p>Quản Lý Khách Hàng</p>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="row">
+                <div class="dsSP">
+            
+                    <hr style="border: 1px solid gray;">
+                    <div style="width: 200px;">
+                        <div class="input-group rounded">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                            <button class="btn">Tìm kiếm</button>
+                        </div>
+                    </div>
+                    <table class="table text-center">
+                        <tr>
+                        <tr>
+                    
+                            <th>
+                                Xóa | Sữa
+
+                            </th>
+                            <th>Mã hóa đơn</th>
+                            <th>Đơn giá</th>
+                            <th>Ngày đặt</th>
+                            <th>Địa chỉ nhận hàng</th>
+                            <th>Phương thức vận chuyện</th>
+                            <th>Phương thức thanh toán</th>
+                            <th>Mã khách hàng</th>
+                            <th>Tình trạng</th>
+
+
+
+                        </tr>
+               
+                            @foreach (var i in Model)
+        {
+            <form action="/Admin/CheckTT/?m=@i.MaHDDH" method="post">
+                <tr>
+                    <td>
+                        <a href="/Admin/XoaHd/?m=@i.MaHDDH">
+                            Xóa
+                        </a>
+                        <input type="submit" value="sửa" />
+                    </td>
+                    <td>@i.MaHDDH</td>
+                    <td>@i.DonGia</td>
+                    <td>@i.NgayDat</td>
+                    <td>@i.DiaChiNhanHang</td>
+                    <td>@i.PTVanChuyen</td>
+                    <td>@i.PTThanhToan</td>
+                    <td title="@i.KhachHang.HoTen">@i.MaKH</td>
+
+                    <td>
+                        <select class="form-select" name="loai">
+                            <option value="@i.TinhTrangGiao">@i.TinhTrangGiao</option>
+                            <option value="Đang giao hàng">Đang giao hàng</option>
+                        </select>
+                  
+
+                    </td>
+
+
+                </tr>
+            </form>
+        }
+               
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+

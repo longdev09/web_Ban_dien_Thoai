@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout-page.cshtml";
+}
+
+@*pham dau conten*@
+
+
+<div class="slider">
+    <div class="slider-wrap">
+        <div class="slider-main">
+            <div class="slider-item">
+                <img src="~/Assets/Img_Logo_Banner/banner-DauTrang.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="content">
+    <!-- flase sale -->
+    <div class="products-flase-sale">
+        <div class="container">
+            @Html.Action("FlaseSale", "HienThiSanPham");
+        </div>
+    </div>
+    <!-- sản phẩm? -->
+    <div class="section-product-collection">
+        <!-- slider-product -->
+        <div class="slder-product">
+            <div class="container">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Assets/Img_Logo_Banner/slide-1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Assets/Img_Logo_Banner/slider-2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Assets/Img_Logo_Banner/slider-3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*san pham apple*@
+        @Html.Action("HienThiSanPhamIphone_Home", "HienThiSanPham")
+        @*cap sac*@
+        @Html.Action("HienThiSanPhamCapSac_Home", "HienThiSanPham")
+        @*du phong*@
+        @Html.Action("HienThiSanPhamDuPhong_Home", "HienThiSanPham")
+        @*Tai nghe*@
+        @Html.Action("HienThiSanPhamTaiNghe_Home", "HienThiSanPham")
+
+  
+    </div>
+
+</div>
+
+<!-- =======================     LOAD TRANG WEB     ======================== -->
+@*<div class="loader-container">
+    <img src="~/Assets/Img_Logo_Banner/z3974067357024_bd8c9035656a58326d39ce642b761faa.gif" />
+</div>*@
+
+
+<!-- javascript -->
+@*<script src="~/Assets/JavaScript1.js"></script>*@

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "XemChiTietSp";
+    Layout = "~/Views/Shared/Layout-page.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model LinhKien
+<link href="~/Assets/Style/chiTiet.css" rel="stylesheet" />
+<div class="content-section">
+    <div class="product-Details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 product-gallery">
+                    <div class="product-content-gallery">
+                        <div class="product-gallery-img">
+                            <img src="~/Assets/img-Sp/@Model.HinhAnh" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md product-detail">
+                    <div class="product-content-detail">
+                        <div class="row product-order">
+                            <div class="product-order-heading">
+                                <h1>@Model.TenLK</h1>
+                                <h6>Tình trạng: Còn hàng</h6>
+                            </div>
+                            <div class="product-order-price">
+                               
+                                <span class="pro-price">
+                                    @Model.DonGia
+                                </span>
+                            </div>
+                            <div class="row product-order-actions">
+                                
+                                <a class="col-md porduct-order-buying" href="/GioHang/ChonMua/?mlk=@Model.MaLK">
+                                    <button class="btn-pro-order-buying" type="button">THÊM VÀO GIỎ</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <div class="row product-des">
+                            <div class="product-des-heading">
+                                <span>THÔNG TIN SẢN PHẨM</span>
+                            </div>
+                            <div class="product-des-text">
+                                Đang cập nhật ........!
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <hr>
+
+
+</div>  

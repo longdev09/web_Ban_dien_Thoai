@@ -1,0 +1,53 @@
+﻿
+@using LKDienThoai_Web.Models;
+@model List<LinhKien>
+
+<div class="flase-sale">
+    <div class="banner-flase">
+        <img src="~/Assets/Img_Logo_Banner/sale_banner.gif" class=" banner-flase-img">
+    </div>
+    <div class="wraplist-products-flase-sale">
+        @foreach(var item in Model)
+        {
+        <div class="product-item">
+            <div class="product-loop">
+                <div class="product-title">
+                   
+                    <a class="prod-img" href="">
+                        <img src="~/Assets/img-Sp/@item.HinhAnh" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="product-details">
+                    <h3>
+                        <a href="" class="prod-text-detai">
+                            @item.TenLK
+                        </a>
+                    </h3>
+
+                    <div class="product-price">
+                     
+                        <span class="price">Giá: @item.DonGia₫</span>
+                       
+                    </div>
+
+                </div>
+                <div class="product-action">
+                    <a href="/GioHang/ChonMua/?mlk=@item.MaLK" class="add-cart">
+                        <i class='bx bxs-cart-add'></i>
+                        Thêm vào giỏ
+                    </a>
+                    <div class="add-heart">
+                        <i class='bx bxs-heart'></i>
+                    </div>
+                    <div class="fast-detail">
+                        <i class='bx bx-cog'></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+        }
+    </div>
+</div>

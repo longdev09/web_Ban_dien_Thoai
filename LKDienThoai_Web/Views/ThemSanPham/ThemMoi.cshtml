@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "ThemMoi";
+}
+
+<form action="/ThemSanPham/xlThemMoi" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>
+            Thêm sản phẩm mới
+        </legend>
+        <div>
+            <div style="margin: 20px" class="editor-field">
+                <input type="text" name="TLK" placeholder="Tên linh kiện" />
+            </div>
+            <div style="margin: 20px" class="editor-field">
+                <input type="text" name="MoTa" placeholder="Mô tả" />
+            </div>
+            <div style="margin: 20px" class="editor-field">
+                <input type="file" name="fup" />
+
+            </div>
+            <div style="margin: 20px" class="editor-field">
+                <input type="text" name="DonGia" placeholder="Đơn Giá" />
+            </div>
+            <div style="margin: 20px" class="editor-field">
+                <input type="text" name="SlTon" placeholder="số lượng" />
+            </div>
+
+        </div>
+        <p>
+            <input type="submit" name="Create" />
+        </p>
+    </fieldset>
+    <div>
+        @Html.ActionLink("Về trang chủ", "Index")
+    </div>
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</form>

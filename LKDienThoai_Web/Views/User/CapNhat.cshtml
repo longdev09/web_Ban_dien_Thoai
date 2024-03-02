@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "CapNhat";
+    Layout = "~/Views/Shared/Layout-page.cshtml";
+}
+<style>
+    /*Sửa from*/
+    .input-create-acc input {
+        width: 100%;
+        margin-top: 25px;
+        height: 50px;
+        padding: 12px;
+        font-size: 13px;
+        color: #5c5c5c;
+        border: none;
+        background-color: #ededed;
+        border-radius: 3px;
+    }
+
+    .input-create-acc .input-gt {
+        height: 12px;
+        width: 17px;
+    }
+
+    .input-create-acc input[type=text]:focus {
+        background-color: #fff;
+    }
+
+    .input-create-acc .button-create-acc {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+        .input-create-acc .button-create-acc button {
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            background-color: black;
+        }
+
+            .input-create-acc .button-create-acc button:hover {
+                background-color: #fff;
+                color: black;
+                border: 1px black solid;
+            }
+
+
+
+</style>
+<div class="container">
+    <div class="input-create-acc">
+        <form action="/User/xlCn" method="post">
+            <input required type="text" placeholder="Họ Tên" name="ht">
+            <br>
+            <input required type="text" placeholder="Ngày Sinh" name="sn">
+            <br>
+            <input required type="text" placeholder="Điện Thoại" name="dt">
+            <br>
+            <input required type="text" placeholder="Địa Chỉ" name="dc">
+            <br>
+            <input required class="input-gt" type="radio" id="html" name="fav_language" value="Nam"> Nam
+            <input required class="input-gt" type="radio" id="html" name="fav_language" value="Nữ"> Nữ
+            <br>
+
+            <div class="button-create-acc">
+                <input required type="submit" value="Cập nhật">
+
+
+            </div>
+
+        </form>
+    </div>
+</div>
+

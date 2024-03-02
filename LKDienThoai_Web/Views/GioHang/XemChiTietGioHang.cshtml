@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "XemChiTietGioHang";
+    Layout = "~/Views/Shared/Layout-page.cshtml";
+}
+@using LKDienThoai_Web.Models;
+@model List<ILinhKien>
+<div class="body-carts">
+    <div class="container">
+        <div class="cart-body-product">
+            <div class="cart-list-left">
+                <div class="cart-lists">
+                    @foreach (var item in Model)
+{
+    <form action="/GioHang/LuuThem/?m=@item.maLK" class="btn-cart-count" method="post">
+        <div class="cart-item">
+            <div class="img-product-cart-item">
+                <img src="~/Assets/img-Sp/@item.hinhAnh" alt="">
+            </div>
+            <div class="name-product-cart-item">
+                <h3>@item.tenLK</h3>
+                <div class="code-product-cart-item">
+                    @item.maLK
+                </div>
+                <div class="edit-cart-product">
+                    <a href="/GioHang/xoaSpTrongGio/?malk=@item.maLK">Xóa</a>
+                    <input type="submit" value="Lưu" style="border: none" />
+
+                </div>
+
+
+            </div>
+            <div class="price-product-cart-item">
+                <span style="color: red; font-weight: bold;">@item.donGia₫</span>
+            </div>
+            <div class="btn-count-product">
+
+                <input type="text" class="quantity-input" value="@item.slMua" id="result" name="sl">
+
+            </div>
+        </div>
+    </form>
+
+                                            <hr>
+
+}
+                </div>
+              
+
+            </div>
+            <div class="cart-list-right ">
+                <div class="cart-page-info">
+                    <h1>Thông tin sản phẩm</h1>
+                    <div class="cart-page-subtitle">
+                        <span>Tạm tính (@ViewBag.tongSlhang sản phẩm)</span>
+                        <span>@ViewBag.tongTien₫</span>
+                    </div>
+                    <div class="cart-page-total">
+                        Phương thức thanh toán xe đươc chọn khi bạn đặt hàng
+                    </div>
+                    <hr>
+                    <div class="cart-page-subtitle">
+                        <span>Tổng cộng</span>
+                        <span style="color: red; font-weight: bold;">@ViewBag.tongTien₫</span>
+                    </div>
+                    <div class="cart-page-checkout">
+                        <a href="/DatHang/DatHang">
+                            <button class="btn-pro-order-buying">ĐẶT HÀNG</button>
+                        </a>
+                  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

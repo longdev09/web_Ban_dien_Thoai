@@ -1,0 +1,63 @@
+﻿@using LKDienThoai_Web.Models;
+@model List<LinhKien>
+
+
+
+@*san pham apple*@
+<div class="home-product-collection " style="margin-top: 49px;">
+    <div class="container">
+        <div class="banner-product">
+            <img src="~/Assets/Img_Logo_Banner/bannerApple.png" alt="" style="width: 100%;">
+        </div>
+        <div class="wraplist-products">
+            @foreach (var item in Model)
+{
+    <div class="product-item">
+        <div class="product-loop">
+            <div class="product-title">
+                
+                <a class="prod-img" href="">
+                    <img src="~/Assets/img-Sp/@item.HinhAnh" class="img-fluid">
+                </a>
+            </div>
+
+            <div class="product-details">
+                <h3>
+                    <a href="" class="prod-text-detai">
+                        @item.TenLK
+                    </a>
+                </h3>
+
+                <div class="product-price">
+                    <!-- giá sau khi giam -->
+                    <span class="price">Giá: @item.DonGia₫</span>
+                    
+                </div>
+
+            </div>
+            <div class="product-action">
+                <a class="add-cart" href="/GioHang/ChonMua/?mlk=@item.MaLK">
+                    <i class='bx bxs-cart-add'></i>
+                    Thêm vào giỏ
+                </a>
+                <div class="add-heart">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="fast-detail">
+                    <i class='bx bx-cog'></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+}
+        </div>
+        <div class="btn-view-all-product">
+            <a href="">Xem tất cả sản phẩm Apple</a>
+        </div>
+        <!-- các sản phẩm item -->
+
+    </div>
+</div>
+
